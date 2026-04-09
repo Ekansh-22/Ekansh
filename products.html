@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Sidhshree Computronics Pvt. Ltd.</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:56px}
+.product-card{border-radius:15px;overflow:hidden;box-shadow:var(--shadow);border:1.5px solid var(--border);transition:.3s;display:flex;flex-direction:column}
+.product-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
+.product-header{padding:28px 24px;color:#fff}
+.ph-blue{background:linear-gradient(135deg,var(--blue),var(--blue-dark))}
+.ph-orange{background:linear-gradient(135deg,var(--accent),#b45309)}
+.ph-dark{background:linear-gradient(135deg,#1e293b,#0f172a)}
+.ph-green{background:linear-gradient(135deg,#059669,#064e3b)}
+.ph-purple{background:linear-gradient(135deg,#7c3aed,#4c1d95)}
+.ph-red{background:linear-gradient(135deg,#dc2626,#7f1d1d)}
+.plan-tag{font-size:0.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;opacity:.72;margin-bottom:7px}
+.product-header h3{font-family:'Syne',sans-serif;font-size:1.28rem;font-weight:800;margin-bottom:4px}
+.product-header p{opacity:.78;font-size:0.82rem}
+.product-body{padding:24px;flex:1;background:#fff}
+.feature-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.feature-list li{display:flex;align-items:center;gap:9px;font-size:0.86rem;color:var(--dark2)}
+.feature-list li i{color:var(--blue);font-size:0.76rem}
+.product-footer{padding:0 24px 24px}
+.btn-plan{display:block;text-align:center;padding:11px;border-radius:8px;font-weight:600;font-size:0.87rem;border:2px solid var(--blue);color:var(--blue);transition:.2s}
+.btn-plan:hover{background:var(--blue);color:#fff}
+.btn-plan.o{border-color:var(--accent);color:var(--accent)}.btn-plan.o:hover{background:var(--accent);color:#fff}
+.btn-plan.d{border-color:#1e293b;color:#1e293b}.btn-plan.d:hover{background:#1e293b;color:#fff}
+.btn-plan.g{border-color:#059669;color:#059669}.btn-plan.g:hover{background:#059669;color:#fff}
+.btn-plan.p{border-color:#7c3aed;color:#7c3aed}.btn-plan.p:hover{background:#7c3aed;color:#fff}
+.btn-plan.r{border-color:#dc2626;color:#dc2626}.btn-plan.r:hover{background:#dc2626;color:#fff}
+.cat-title{font-family:'Syne',sans-serif;font-size:1.35rem;font-weight:700;color:var(--dark);margin:48px 0 24px;padding-bottom:12px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:12px}
+.cat-title i{color:var(--blue);font-size:1.1rem}
+@media(max-width:1024px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.products-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Products</span></div>
+    <h1>Our <em>Products</em></h1>
+    <p>Competitive pricing on genuine, authorised products across compute, networking, security, software and peripherals.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    <div class="cat-title"><i class="fas fa-laptop"></i>Compute &amp; Endpoints</div>
+    <div class="products-grid">
+      <div class="product-card anim"><div class="product-header ph-blue"><div class="plan-tag">Dell</div><h3>Dell Business Range</h3><p>Enterprise laptops, desktops &amp; servers</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>Dell Latitude (business laptops)</li><li><i class="fas fa-check-circle"></i>Dell Vostro (SMB laptops &amp; desktops)</li><li><i class="fas fa-check-circle"></i>Dell OptiPlex (commercial desktops)</li><li><i class="fas fa-check-circle"></i>Dell Precision (workstations)</li><li><i class="fas fa-check-circle"></i>Dell PowerEdge (servers)</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan">Get a Quote</a></div></div>
+      <div class="product-card anim"><div class="product-header ph-orange"><div class="plan-tag">HP</div><h3>HP Business Range</h3><p>Reliable laptops, desktops &amp; servers</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>HP ProBook (business laptops)</li><li><i class="fas fa-check-circle"></i>HP EliteBook (premium business)</li><li><i class="fas fa-check-circle"></i>HP ProDesk / EliteDesk (desktops)</li><li><i class="fas fa-check-circle"></i>HP ZBook (workstations)</li><li><i class="fas fa-check-circle"></i>HP ProLiant (servers)</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan o">Get a Quote</a></div></div>
+      <div class="product-card anim"><div class="product-header ph-dark"><div class="plan-tag">Lenovo</div><h3>Lenovo Think Series</h3><p>Business-grade Think branded systems</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>ThinkPad (business laptops)</li><li><i class="fas fa-check-circle"></i>ThinkCentre (commercial desktops)</li><li><i class="fas fa-check-circle"></i>ThinkStation (workstations)</li><li><i class="fas fa-check-circle"></i>ThinkServer / ThinkSystem</li><li><i class="fas fa-check-circle"></i>IdeaPad (budget range)</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan d">Get a Quote</a></div></div>
+    </div>
+
+    <div class="cat-title"><i class="fas fa-network-wired"></i>Networking &amp; Security</div>
+    <div class="products-grid">
+      <div class="product-card anim"><div class="product-header ph-blue"><div class="plan-tag">Cisco</div><h3>Cisco Networking</h3><p>Enterprise switches, routers &amp; Wi-Fi</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>Cisco Catalyst Switches</li><li><i class="fas fa-check-circle"></i>Cisco ISR / ASR Routers</li><li><i class="fas fa-check-circle"></i>Cisco Aironet &amp; Meraki Wi-Fi</li><li><i class="fas fa-check-circle"></i>Cisco ASA &amp; Firepower</li><li><i class="fas fa-check-circle"></i>Cisco Meraki SD-WAN</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan">Get a Quote</a></div></div>
+      <div class="product-card anim"><div class="product-header ph-orange"><div class="plan-tag">Sophos &amp; Fortinet</div><h3>Firewall &amp; UTM</h3><p>Next-gen firewall &amp; threat protection</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>Sophos XG / XGS Firewall</li><li><i class="fas fa-check-circle"></i>Sophos UTM (Unified Threat Management)</li><li><i class="fas fa-check-circle"></i>Fortinet FortiGate NGFW</li><li><i class="fas fa-check-circle"></i>FortiSwitch &amp; FortiAP</li><li><i class="fas fa-check-circle"></i>Seqrite UTM &amp; Endpoint Security</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan o">Get a Quote</a></div></div>
+      <div class="product-card anim"><div class="product-header ph-dark"><div class="plan-tag">D-Link</div><h3>D-Link Networking</h3><p>Switches, routers &amp; Wi-Fi solutions</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>D-Link Managed &amp; Unmanaged Switches</li><li><i class="fas fa-check-circle"></i>D-Link Wi-Fi 6 Access Points</li><li><i class="fas fa-check-circle"></i>D-Link Business Routers</li><li><i class="fas fa-check-circle"></i>D-Link NAS &amp; Storage</li><li><i class="fas fa-check-circle"></i>D-Link IP Cameras &amp; NVR</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan d">Get a Quote</a></div></div>
+    </div>
+
+    <div class="cat-title"><i class="fas fa-cloud"></i>Software &amp; Cloud Licensing</div>
+    <div class="products-grid">
+      <div class="product-card anim"><div class="product-header ph-blue"><div class="plan-tag">Microsoft 365 SMB</div><h3>M365 Business Plans</h3><p>For teams up to 300 users</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>Microsoft 365 Business Basic</li><li><i class="fas fa-check-circle"></i>Microsoft 365 Business Standard</li><li><i class="fas fa-check-circle"></i>Microsoft 365 Business Premium</li><li><i class="fas fa-check-circle"></i>Microsoft Teams &amp; Exchange Online</li><li><i class="fas fa-check-circle"></i>OneDrive for Business (1TB)</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan">Get a Quote</a></div></div>
+      <div class="product-card anim"><div class="product-header ph-dark"><div class="plan-tag">Microsoft 365 Enterprise</div><h3>M365 Enterprise Plans</h3><p>For large organisations</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>Microsoft 365 E3</li><li><i class="fas fa-check-circle"></i>Microsoft 365 E5</li><li><i class="fas fa-check-circle"></i>Microsoft 365 F1 / F3 (Frontline)</li><li><i class="fas fa-check-circle"></i>Microsoft Azure AD &amp; Intune</li><li><i class="fas fa-check-circle"></i>Microsoft Defender for Endpoint</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan d">Get a Quote</a></div></div>
+      <div class="product-card anim"><div class="product-header ph-green"><div class="plan-tag">AWS &amp; Windows</div><h3>OS &amp; Cloud Services</h3><p>Licences &amp; cloud infrastructure</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>Windows 11 Pro / Home</li><li><i class="fas fa-check-circle"></i>Windows Server 2022</li><li><i class="fas fa-check-circle"></i>Microsoft Office 2021 (perpetual)</li><li><i class="fas fa-check-circle"></i>AWS EC2, S3 &amp; RDS</li><li><i class="fas fa-check-circle"></i>AWS migration &amp; support</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan g">Get a Quote</a></div></div>
+    </div>
+
+    <div class="cat-title"><i class="fas fa-keyboard"></i>Peripherals &amp; Accessories</div>
+    <div class="products-grid">
+      <div class="product-card anim"><div class="product-header ph-purple"><div class="plan-tag">Logitech</div><h3>Logitech Business</h3><p>Input devices &amp; collaboration tools</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>Business keyboards &amp; mice</li><li><i class="fas fa-check-circle"></i>HD &amp; 4K business webcams</li><li><i class="fas fa-check-circle"></i>Headsets &amp; speakerphones</li><li><i class="fas fa-check-circle"></i>Video conferencing room kits</li><li><i class="fas fa-check-circle"></i>Logitech for Business (B2B)</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan p">Get a Quote</a></div></div>
+      <div class="product-card anim"><div class="product-header ph-blue"><div class="plan-tag">Samsung</div><h3>Samsung Displays &amp; SSDs</h3><p>Monitors, storage &amp; enterprise mobility</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>Samsung professional monitors (24"–55")</li><li><i class="fas fa-check-circle"></i>Samsung Smart Signage displays</li><li><i class="fas fa-check-circle"></i>Samsung SSDs (SATA &amp; NVMe)</li><li><i class="fas fa-check-circle"></i>Samsung enterprise storage</li><li><i class="fas fa-check-circle"></i>Samsung tablets &amp; mobile devices</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan">Get a Quote</a></div></div>
+      <div class="product-card anim"><div class="product-header ph-red"><div class="plan-tag">UPS &amp; Power</div><h3>Power Protection</h3><p>UPS systems &amp; power conditioning</p></div><div class="product-body"><ul class="feature-list"><li><i class="fas fa-check-circle"></i>APC by Schneider Electric UPS</li><li><i class="fas fa-check-circle"></i>Numeric UPS systems</li><li><i class="fas fa-check-circle"></i>Line-interactive &amp; online UPS</li><li><i class="fas fa-check-circle"></i>UPS for servers and data centres</li><li><i class="fas fa-check-circle"></i>AMC &amp; battery replacement services</li></ul></div><div class="product-footer"><a href="contact.html" class="btn-plan r">Get a Quote</a></div></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-band">
+  <div class="container">
+    <div><h2>Need a Custom Configuration?</h2><p>Our team can build exactly what your business needs at the best price</p></div>
+    <div class="cta-right">
+      <div class="cta-phone"><div class="icon"><i class="fas fa-phone-alt"></i></div><div><small>Call us</small><strong>011‑46051122</strong></div></div>
+      <a href="contact.html" class="btn-accent">Request A Quote</a>
+    </div>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

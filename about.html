@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Sidhshree Computronics Pvt. Ltd.</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root{
+  --blue:#1a56db;--blue-dark:#1040b0;--blue-light:#e8f0fe;
+  --accent:#f97316;--dark:#0f172a;--dark2:#1e293b;
+  --gray:#64748b;--light:#f8fafc;--white:#fff;--border:#e2e8f0;
+  --shadow:0 4px 24px rgba(26,86,219,.10);--shadow-lg:0 8px 40px rgba(26,86,219,.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--dark);background:var(--light);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--dark);color:#94a3b8;font-size:0.82rem;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar a{color:#94a3b8;transition:color .2s}.topbar a:hover{color:#fff}
+.topbar-left,.topbar-right{display:flex;align-items:center;gap:20px}
+.topbar i{color:var(--accent);margin-right:5px}
+
+/* ── NAV ── */
+nav{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 24px;max-width:1200px;margin:0 auto;height:72px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:800;font-family:'Syne',sans-serif}
+.logo-text{font-family:'Syne',sans-serif;font-weight:800;font-size:1.08rem;color:var(--dark);line-height:1.1}
+.logo-text span{display:block;font-size:0.64rem;font-weight:500;color:var(--gray);letter-spacing:1.5px;text-transform:uppercase}
+.nav-links{display:flex;list-style:none;gap:2px}
+.nav-links a{padding:8px 13px;border-radius:8px;font-size:0.87rem;font-weight:500;color:var(--gray);transition:all .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-light);color:var(--blue)}
+.nav-btn{background:var(--blue);color:#fff;padding:10px 22px;border-radius:8px;font-weight:600;font-size:0.87rem;transition:all .2s}
+.nav-btn:hover{background:var(--blue-dark)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px}
+.mobile-menu{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--border);padding:16px 24px;gap:4px}
+.mobile-menu a{padding:10px 12px;border-radius:8px;font-weight:500;color:var(--gray);font-size:0.95rem}
+.mobile-menu a:hover{background:var(--blue-light);color:var(--blue)}
+.mobile-menu.open{display:flex}
+
+/* ── PAGE HERO ── */
+.page-hero{background:linear-gradient(135deg,#1040b0 0%,#0f172a 100%);padding:64px 0 56px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px}
+.page-hero-inner{position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,.55);margin-bottom:16px}
+.breadcrumb a{color:rgba(255,255,255,.55);transition:.2s}.breadcrumb a:hover{color:#fff}
+.breadcrumb i{font-size:0.6rem}
+.breadcrumb span{color:rgba(255,255,255,.9)}
+.page-hero h1{font-family:'Syne',sans-serif;font-size:2.6rem;font-weight:800;color:#fff;line-height:1.2;margin-bottom:12px}
+.page-hero h1 em{color:var(--accent);font-style:normal}
+.page-hero p{color:#94a3b8;font-size:1rem;max-width:560px;line-height:1.7}
+
+/* ── SECTIONS ── */
+section{padding:88px 0}
+.section-tag{font-size:0.77rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.section-title{font-family:'Syne',sans-serif;font-size:2.05rem;font-weight:800;color:var(--dark);line-height:1.26;margin-bottom:16px}
+.section-title span{color:var(--blue)}
+.divider{width:50px;height:4px;background:var(--accent);border-radius:2px;margin:10px 0 28px}
+.center{text-align:center}.center .divider{margin:10px auto 28px}
+
+/* ── ABOUT STORY ── */
+.about-story .container{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.about-img-box{border-radius:16px;height:420px;background:linear-gradient(135deg,var(--blue),#0f172a);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-lg)}
+.check-list{display:flex;flex-direction:column;gap:10px;margin-bottom:26px}
+.check-item{display:flex;align-items:center;gap:11px;font-weight:500;color:var(--dark2);font-size:0.93rem}
+.check-item i{color:var(--blue);background:var(--blue-light);width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.7rem;flex-shrink:0}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:13px 28px;border-radius:8px;font-weight:600;font-size:0.93rem;transition:all .2s;border:2px solid var(--blue)}
+.btn-primary:hover{background:var(--blue-dark)}
+
+/* ── VALUES ── */
+.values{background:var(--light)}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.value-card{background:#fff;border:1.5px solid var(--border);border-radius:13px;padding:32px 24px;text-align:center;transition:.3s}
+.value-card:hover{box-shadow:var(--shadow-lg);border-color:var(--blue);transform:translateY(-4px)}
+.value-icon{width:64px;height:64px;background:var(--blue-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1.5rem;margin:0 auto 18px}
+.value-card h3{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:10px}
+.value-card p{color:var(--gray);font-size:0.86rem;line-height:1.65}
+
+/* ── DIRECTORS ── */
+.directors-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+.director-card{background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:36px 32px;display:flex;gap:28px;align-items:center;transition:.3s;position:relative;overflow:hidden}
+.director-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--blue),var(--accent))}
+.director-card:hover{box-shadow:var(--shadow-lg);border-color:var(--blue);transform:translateY(-3px)}
+.director-photo{width:110px;height:110px;border-radius:50%;flex-shrink:0;overflow:hidden;border:3px solid var(--blue-light);box-shadow:0 4px 18px rgba(26,86,219,.18)}
+.director-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.director-photo .photo-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--blue),var(--blue-dark));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:1.8rem;font-weight:800;color:#fff}
+.director-info h3{font-family:'Syne',sans-serif;font-size:1.22rem;font-weight:800;color:var(--dark);margin-bottom:4px}
+.director-role{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:0.76rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.director-bio{color:var(--gray);font-size:0.87rem;line-height:1.65}
+.director-social{display:flex;gap:8px;margin-top:14px}
+.director-social a{width:30px;height:30px;border-radius:7px;background:var(--light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:0.75rem;transition:.2s}
+.director-social a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* ── CTA BAND ── */
+.cta-band{background:linear-gradient(90deg,var(--dark) 55%,#163a72);padding:46px 0}
+.cta-band .container{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-band h2{font-family:'Syne',sans-serif;font-size:1.55rem;font-weight:800;color:#fff}
+.cta-band p{color:#94a3b8;font-size:0.9rem;margin-top:4px}
+.cta-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.btn-accent{background:var(--accent);color:#fff;padding:12px 28px;border-radius:8px;font-weight:600;font-size:0.92rem;transition:all .2s}
+.btn-accent:hover{background:#ea6c00}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);color:#94a3b8;padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand h3{font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:800;color:#fff;margin-bottom:10px}
+.footer-brand h3 em{color:var(--accent);font-style:normal}
+.footer-brand p{font-size:0.85rem;line-height:1.7;max-width:280px;margin-bottom:20px}
+.footer-social{display:flex;gap:8px}
+.soc{width:34px;height:34px;border-radius:7px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#94a3b8;transition:.2s;font-size:0.85rem}
+.soc:hover{background:var(--blue);color:#fff}
+.footer-col h4{font-family:'Syne',sans-serif;font-weight:700;color:#fff;font-size:0.94rem;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--accent);display:inline-block}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.footer-col ul li a{font-size:0.84rem;transition:.2s;display:flex;align-items:center;gap:5px}
+.footer-col ul li a::before{content:'›';color:var(--blue);font-size:.95rem}
+.footer-col ul li a:hover{color:#fff;padding-left:4px}
+.fc-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:0.84rem;line-height:1.55}
+.fc-item i{color:var(--blue);margin-top:2px;width:13px;flex-shrink:0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:18px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:0.79rem}
+.footer-bottom a{color:var(--blue)}
+
+/* ── ANIM ── */
+.anim{opacity:0;transform:translateY(22px);transition:opacity .5s ease,transform .5s ease}
+.anim.visible{opacity:1;transform:translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .about-story .container{grid-template-columns:1fr;gap:44px}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .directors-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:768px){
+  .topbar-left{display:none}
+  .nav-links,.nav-btn{display:none}
+  .hamburger{display:flex}
+  .mobile-menu.open{display:flex}
+  .page-hero h1{font-size:2rem}
+  .values-grid{grid-template-columns:1fr}
+  .director-card{flex-direction:column;text-align:center}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-band .container{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span><i class="fas fa-map-marker-alt"></i>97B, 1st Floor, Amritpuri, East of Kailash, Delhi‑110065</span>
+      <a href="/cdn-cgi/l/email-protection#a3cec2cacfd7cc99c0d0d3d0d6d3d3ccd1d7e3d0cac7cbd0cbd1c6c68dc0ccce"><i class="fas fa-envelope"></i><span class="__cf_email__" data-cfemail="a3c0d0d3d0d6d3d3ccd1d7e3d0cac7cbd0cbd1c6c68dc0ccce">[email&#160;protected]</span></a>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:01146051122"><i class="fas fa-phone"></i>011‑46051122</a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">SC</div>
+      <div class="logo-text">Sidhshree Computronics <span>Pvt. Ltd. · Authorised Dealer</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#partners">Partners</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-btn">Get a Quote</a>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About Us</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#partners">Partners</a>
+    <a href="index.html#products">Products</a>
+    <a href="team.html">Our Team</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>About Us</span>
+    </div>
+    <h1>About <em>Sidhshree Computronics</em></h1>
+    <p>23+ years of enterprise trust, technology excellence and customer-first service across India's IT ecosystem.</p>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="about-story">
+  <div class="container">
+    <div class="about-img-box">
+      <svg width="230" height="230" viewBox="0 0 230 230" fill="none" style="opacity:.18">
+        <rect x="14" y="14" width="88" height="88" rx="13" stroke="white" stroke-width="7"/>
+        <rect x="128" y="14" width="88" height="88" rx="13" stroke="white" stroke-width="7"/>
+        <rect x="14" y="128" width="88" height="88" rx="13" stroke="white" stroke-width="7"/>
+        <rect x="128" y="128" width="88" height="88" rx="13" stroke="white" stroke-width="7"/>
+        <circle cx="115" cy="115" r="20" stroke="white" stroke-width="7"/>
+      </svg>
+    </div>
+    <div>
+      <div class="section-tag">Who We Are</div>
+      <h2 class="section-title">Two Decades of <span>Technology Excellence</span></h2>
+      <div class="divider"></div>
+      <p style="color:var(--gray);line-height:1.76;margin-bottom:18px">Sidhshree Computronics Pvt. Ltd. is a complete IT, Telecom and Network Solutions provider delivering end-to-end, enterprise-grade technology solutions for organisations across India. With over two decades of experience, we have been empowering organisations with secure, scalable and future-ready IT infrastructure.</p>
+      <p style="color:var(--gray);line-height:1.76;margin-bottom:22px">We are an authorised channel partner and dealer for globally trusted brands including Dell, HP, Lenovo, Cisco, Sophos, Fortinet, D-Link, Acer, Logitech, Microsoft, Samsung, AWS and Seqrite — ensuring our clients always receive genuine, warranted products backed by expert support.</p>
+      <div class="check-list">
+        <div class="check-item"><i class="fas fa-check"></i>Authorised Dealer for 14+ Global Brands</div>
+        <div class="check-item"><i class="fas fa-check"></i>Hardware, Networking &amp; Software Solutions</div>
+        <div class="check-item"><i class="fas fa-check"></i>Enterprise &amp; SMB IT Procurement</div>
+        <div class="check-item"><i class="fas fa-check"></i>AMC, Installation &amp; After-Sales Support</div>
+        <div class="check-item"><i class="fas fa-check"></i>Cloud, Cybersecurity &amp; Managed Services</div>
+      </div>
+      <a href="contact.html" class="btn-primary">Get a Free Quote <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values">
+  <div class="container">
+    <div class="center" style="margin-bottom:48px">
+      <div class="section-tag">Our Values</div>
+      <h2 class="section-title">What Drives <span>Everything We Do</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card anim"><div class="value-icon"><i class="fas fa-certificate"></i></div><h3>Genuine &amp; Authorised</h3><p>Every product we supply is 100% genuine from authorised channels — no grey market, no compromise on quality or warranty.</p></div>
+      <div class="value-card anim"><div class="value-icon"><i class="fas fa-users"></i></div><h3>Customer First</h3><p>We build long-term relationships, not just transactions. Our team goes above and beyond to ensure your complete satisfaction.</p></div>
+      <div class="value-card anim"><div class="value-icon"><i class="fas fa-shield-alt"></i></div><h3>Reliability</h3><p>With 20+ years in the market, our reputation is built on keeping promises — on time, on budget, with full support.</p></div>
+      <div class="value-card anim"><div class="value-icon"><i class="fas fa-lightbulb"></i></div><h3>Innovation</h3><p>We stay ahead of technology trends to bring you the most relevant, future-ready solutions for your business needs.</p></div>
+      <div class="value-card anim"><div class="value-icon"><i class="fas fa-handshake"></i></div><h3>Integrity</h3><p>Transparent pricing, honest advice and ethical business practices — always. What you see is what you get.</p></div>
+      <div class="value-card anim"><div class="value-icon"><i class="fas fa-tools"></i></div><h3>Expert Support</h3><p>Our engineers are certified and experienced. From installation to AMC, we keep your IT running at peak performance.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTORS ONLY — Core Team removed; see team.html for full team -->
+<section>
+  <div class="container">
+    <div class="center" style="margin-bottom:48px">
+      <div class="section-tag">Leadership</div>
+      <h2 class="section-title">Meet Our <span>Directors</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="directors-grid">
+      <div class="director-card anim">
+        <div class="director-photo">
+          <div class="photo-placeholder" id="dir1-ph">PG</div>
+          <img id="dir1-img" src="images/team/puneet.jpg" alt="Puneet Garg" style="display:none" onload="showImg('dir1')" onerror="showPlaceholder('dir1')">
+        </div>
+        <div class="director-info">
+          <h3>Puneet Garg</h3>
+          <div class="director-role">Director</div>
+          <p class="director-bio">Visionary leader with over 23 years in enterprise IT, steering Sidhshree's strategic growth, key partnerships, and long-term business direction across India's IT ecosystem.</p>
+          <div class="director-social">
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:puneet@sidhshree.com" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="director-card anim">
+        <div class="director-photo">
+          <div class="photo-placeholder" id="dir2-ph">SR</div>
+          <img id="dir2-img" src="images/team/sanket.jpg" alt="Sanket Rastogi" style="display:none" onload="showImg('dir2')" onerror="showPlaceholder('dir2')">
+        </div>
+        <div class="director-info">
+          <h3>Sanket Rastogi</h3>
+          <div class="director-role">Director</div>
+          <p class="director-bio">Operational excellence champion overseeing delivery, client relationships and partner programs. Ensures every project is executed on time and to the highest standard.</p>
+          <div class="director-social">
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:sanket@sidhshree.com" title="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link to full team page -->
+    <div style="text-align:center;margin-top:48px">
+      <p style="color:var(--gray);margin-bottom:16px;font-size:0.95rem">Want to meet the full Sidhshree team?</p>
+      <a href="team.html" class="btn-primary">Meet Our Full Team <i class="fas fa-arrow-right"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="container">
+    <div>
+      <h2>Have a Question? Call Us</h2>
+      <p>Get in touch for a free consultation and quote</p>
+    </div>
+    <div class="cta-right">
+      <a href="contact.html" class="btn-accent">Contact Us Today</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Sidhshree <em>Computronics</em> Pvt. Ltd.</h3>
+        <p>A trusted IT solutions provider and authorised channel partner in New Delhi. Supplying genuine hardware, networking, security and software solutions to businesses across India.</p>
+        <div class="footer-social">
+          <a href="#" class="soc"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="soc"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="soc"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="soc"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#partners">Partners</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">IT Hardware Supply</a></li>
+          <li><a href="#">Networking Solutions</a></li>
+          <li><a href="#">Security &amp; Firewall</a></li>
+          <li><a href="#">Microsoft 365</a></li>
+          <li><a href="#">AMC &amp; IT Support</a></li>
+          <li><a href="#">Peripherals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <div class="fc-item"><i class="fas fa-map-marker-alt"></i><span>97B, 1st Floor, Amritpuri, Near ISKCON Temple, East of Kailash, New Delhi – 110065</span></div>
+        <div class="fc-item"><i class="fas fa-envelope"></i><span class="__cf_email__" data-cfemail="a3c0d0d3d0d6d3d3ccd1d7e3d0cac7cbd0cbd1c6c68dc0ccce">[email&#160;protected]</span></div>
+        <div class="fc-item"><i class="fas fa-phone-alt"></i><span>011‑46051122</span></div>
+        <div class="fc-item"><i class="fas fa-globe"></i><span>www.sidhshree.com</span></div>
+        <div class="fc-item"><i class="fas fa-clock"></i><span>Mon–Sat: 9:00 AM – 6:00 PM</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025 <a href="https://www.sidhshree.com">Sidhshree Computronics Pvt. Ltd.</a> All Rights Reserved.</span>
+      <span>Designed &amp; Developed by <a href="https://www.linkedin.com/in/ekansh-tyagi-103201238/" target="_blank" rel="noopener">Ekansh Tyagi</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Cloudflare email decode -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+<script>
+/* ── HAMBURGER ── */
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+/* ── PHOTO HELPERS ── */
+function showImg(id) {
+  document.getElementById(id + '-img').style.display = 'block';
+  var ph = document.getElementById(id + '-ph');
+  if (ph) ph.style.display = 'none';
+}
+function showPlaceholder(id) {
+  document.getElementById(id + '-img').style.display = 'none';
+  var ph = document.getElementById(id + '-ph');
+  if (ph) ph.style.display = 'flex';
+}
+
+/* ── SCROLL ANIMATIONS ── */
+var obs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) e.target.classList.add('visible');
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.anim').forEach(function(el) { obs.observe(el); });
+</script>
+</body>
+</html>
