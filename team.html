@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team | Sidhshree Computronics Pvt. Ltd.</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<!-- EmailJS SDK -->
+
+
+<style>
+:root{
+  --blue:#1a56db;--blue-dark:#1040b0;--blue-light:#e8f0fe;
+  --accent:#f97316;--dark:#0f172a;--dark2:#1e293b;
+  --gray:#64748b;--light:#f8fafc;--white:#fff;--border:#e2e8f0;
+  --shadow:0 4px 24px rgba(26,86,219,.10);--shadow-lg:0 8px 40px rgba(26,86,219,.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--dark);background:var(--light);overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--dark);color:#94a3b8;font-size:0.82rem;padding:8px 0}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.topbar a{color:#94a3b8;transition:color .2s}.topbar a:hover{color:#fff}
+.topbar-left,.topbar-right{display:flex;align-items:center;gap:20px}
+.topbar i{color:var(--accent);margin-right:5px}
+
+/* ── NAV ── */
+nav{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:1000}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 24px;max-width:1200px;margin:0 auto;height:72px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{width:46px;height:46px;background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:10px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1rem;font-weight:800;font-family:'Plus Jakarta Sans',sans-serif}
+.logo-text{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.08rem;color:var(--dark);line-height:1.1}
+.logo-text span{display:block;font-size:0.64rem;font-weight:500;color:var(--gray);letter-spacing:1.5px;text-transform:uppercase}
+.nav-links{display:flex;list-style:none;gap:2px}
+.nav-links a{padding:8px 13px;border-radius:8px;font-size:0.87rem;font-weight:500;color:var(--gray);transition:all .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:var(--blue-light);color:var(--blue)}
+.nav-btn{background:var(--blue);color:#fff;padding:10px 22px;border-radius:8px;font-weight:600;font-size:0.87rem;transition:all .2s}
+.nav-btn:hover{background:var(--blue-dark)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px}
+.mobile-menu{display:none;flex-direction:column;background:#fff;border-top:1px solid var(--border);padding:16px 24px;gap:4px}
+.mobile-menu a{padding:10px 12px;border-radius:8px;font-weight:500;color:var(--gray);font-size:0.95rem}
+.mobile-menu a:hover{background:var(--blue-light);color:var(--blue)}
+.mobile-menu.open{display:flex}
+
+/* ── PAGE HERO ── */
+.page-hero{background:linear-gradient(135deg,#1040b0 0%,#0f172a 100%);padding:64px 0 56px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:48px 48px}
+.page-hero-inner{position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:0.8rem;color:rgba(255,255,255,.55);margin-bottom:16px}
+.breadcrumb a{color:rgba(255,255,255,.55);transition:.2s}.breadcrumb a:hover{color:#fff}
+.breadcrumb i{font-size:0.6rem}
+.breadcrumb span{color:rgba(255,255,255,.9)}
+.page-hero h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.6rem;font-weight:800;color:#fff;line-height:1.2;margin-bottom:12px}
+.page-hero h1 em{color:var(--accent);font-style:normal}
+.page-hero p{color:#94a3b8;font-size:1rem;max-width:560px;line-height:1.7}
+
+/* ── SECTIONS ── */
+section{padding:88px 0}
+.section-tag{font-size:0.77rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.section-title{font-family:'Plus Jakarta Sans',sans-serif;font-size:2.05rem;font-weight:800;color:var(--dark);line-height:1.26;margin-bottom:16px}
+.section-title span{color:var(--blue)}
+.divider{width:50px;height:4px;background:var(--accent);border-radius:2px;margin:10px 0 28px}
+.center{text-align:center}.center .divider{margin:10px auto 28px}
+
+/* ── DIRECTORS ── */
+.directors-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-bottom:72px}
+.director-card{background:#fff;border:1.5px solid var(--border);border-radius:18px;padding:32px 28px;display:flex;gap:24px;align-items:center;transition:.3s;position:relative;overflow:hidden}
+.director-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--blue),var(--accent))}
+.director-card:hover{box-shadow:var(--shadow-lg);border-color:var(--blue);transform:translateY(-3px)}
+.director-photo{width:110px;height:110px;border-radius:50%;flex-shrink:0;overflow:hidden;border:3px solid var(--blue-light);box-shadow:0 4px 18px rgba(26,86,219,.18)}
+.director-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.director-photo .photo-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--blue),var(--blue-dark));display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.9rem;font-weight:800;color:#fff}
+.director-info h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.22rem;font-weight:800;color:var(--dark);margin-bottom:4px}
+.director-role{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:0.74rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:10px}
+.director-bio{color:var(--gray);font-size:0.86rem;line-height:1.68}
+.director-social{display:flex;gap:8px;margin-top:13px}
+.director-social a{width:31px;height:31px;border-radius:7px;background:var(--light);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray);font-size:0.78rem;transition:.2s}
+.director-social a:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* ── TEAM GRID ── */
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.team-card{background:#fff;border:1.5px solid var(--border);border-radius:14px;padding:26px 18px;text-align:center;transition:.3s;position:relative;overflow:hidden}
+.team-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:.35s}
+.team-card:hover{box-shadow:var(--shadow);border-color:var(--blue-light);transform:translateY(-3px)}
+.team-card:hover::after{transform:scaleX(1)}
+.team-photo{width:88px;height:88px;border-radius:50%;margin:0 auto 14px;overflow:hidden;border:3px solid var(--blue-light);box-shadow:0 4px 14px rgba(26,86,219,.12)}
+.team-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.team-photo .photo-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#1e3a8a,var(--blue));display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.2rem;font-weight:800;color:#fff}
+.team-card h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.95rem;margin-bottom:5px;color:var(--dark)}
+.team-dept{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:7px}
+.team-card p{color:var(--gray);font-size:0.81rem;line-height:1.55}
+
+/* ── CAREERS ── */
+.careers{background:var(--white)}
+.careers-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.careers-info{padding-top:10px}
+.career-perk{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.perk-icon{width:44px;height:44px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1rem;flex-shrink:0}
+.career-perk h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.95rem;margin-bottom:3px}
+.career-perk p{color:var(--gray);font-size:0.84rem;line-height:1.55}
+
+/* ── FORM CARD ── */
+.careers-form-card{background:#fff;border-radius:15px;padding:36px;box-shadow:var(--shadow-lg);border:1.5px solid var(--border)}
+.careers-form-card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:4px;color:var(--dark)}
+.careers-form-card>p{color:var(--gray);font-size:0.83rem;margin-bottom:24px}
+
+/* ── FORM ELEMENTS ── */
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{margin-bottom:14px;position:relative}
+.fg label{display:block;font-size:0.79rem;font-weight:600;color:var(--dark2);margin-bottom:5px}
+.fg input,.fg select,.fg textarea{
+  width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:8px;
+  font-family:'Inter',sans-serif;font-size:0.88rem;color:var(--dark);
+  background:#fff;transition:.2s;outline:none
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,86,219,.09)}
+.fg textarea{resize:vertical;min-height:110px}
+.error-msg{color:#dc2626;font-size:0.75rem;margin-top:4px;display:none}
+.fg.has-error input,.fg.has-error select,.fg.has-error textarea{border-color:#dc2626}
+.fg.has-error .error-msg{display:block}
+
+/* ── SUBMIT BUTTON ── */
+.btn-submit{
+  width:100%;background:var(--blue);color:#fff;border:none;
+  padding:14px;border-radius:8px;font-family:'Inter',sans-serif;
+  font-weight:700;font-size:0.98rem;cursor:pointer;transition:.2s;
+  display:flex;align-items:center;justify-content:center;gap:8px;margin-top:4px
+}
+.btn-submit:hover:not(:disabled){background:var(--blue-dark);box-shadow:var(--shadow)}
+.btn-submit:disabled{opacity:.7;cursor:not-allowed}
+
+/* ── SPINNER ── */
+.spinner{width:17px;height:17px;border:2px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── ERROR BANNER ── */
+.form-error-banner{background:#fef2f2;border:1.5px solid #fca5a5;border-radius:9px;padding:13px 16px;margin-top:12px;color:#dc2626;font-size:0.85rem;display:none}
+
+/* ── SUCCESS ── */
+.form-success{display:none;background:#f0fdf4;border:1.5px solid #86efac;border-radius:12px;padding:28px;text-align:center}
+.form-success i{color:#16a34a;font-size:2.2rem;margin-bottom:12px;display:block}
+.form-success h4{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.08rem;font-weight:700;color:#15803d;margin-bottom:8px}
+.form-success p{color:#166534;font-size:0.87rem;line-height:1.6}
+.form-success .countdown{margin-top:10px;font-size:0.82rem;color:#166534;font-weight:500}
+
+/* ── CTA BAND ── */
+.cta-band{background:linear-gradient(90deg,var(--dark) 55%,#163a72);padding:46px 0}
+.cta-band .container{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta-band h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.55rem;font-weight:800;color:#fff}
+.cta-band p{color:#94a3b8;font-size:0.9rem;margin-top:4px}
+.cta-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.cta-phone{display:flex;align-items:center;gap:11px;color:#fff}
+.cta-phone .icon{background:var(--blue);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.cta-phone small{color:#94a3b8;font-size:0.76rem}
+.cta-phone strong{display:block;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem}
+.btn-accent{background:var(--accent);color:#fff;padding:12px 28px;border-radius:8px;font-weight:600;font-size:0.92rem;transition:all .2s}
+.btn-accent:hover{background:#ea6c00}
+
+/* ── FOOTER ── */
+footer{background:var(--dark);color:#94a3b8;padding:64px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+.footer-brand h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.15rem;font-weight:800;color:#fff;margin-bottom:10px}
+.footer-brand h3 em{color:var(--accent);font-style:normal}
+.footer-brand p{font-size:0.85rem;line-height:1.7;max-width:280px;margin-bottom:20px}
+.footer-social{display:flex;gap:8px}
+.soc{width:34px;height:34px;border-radius:7px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#94a3b8;transition:.2s;font-size:0.85rem}
+.soc:hover{background:var(--blue);color:#fff}
+.footer-col h4{font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;color:#fff;font-size:0.94rem;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--accent);display:inline-block}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.footer-col ul li a{font-size:0.84rem;transition:.2s;display:flex;align-items:center;gap:5px}
+.footer-col ul li a::before{content:'›';color:var(--blue);font-size:.95rem}
+.footer-col ul li a:hover{color:#fff;padding-left:4px}
+.fc-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:12px;font-size:0.84rem;line-height:1.55}
+.fc-item i{color:var(--blue);margin-top:2px;width:13px;flex-shrink:0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:18px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;font-size:0.79rem}
+.footer-bottom a{color:var(--blue)}
+
+/* ── ANIM ── */
+/* animation — elements always visible, fade-in runs once on load */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.anim{animation:fadeUp .55s ease both}
+.director-card.anim{animation-delay:.05s}
+.team-card.anim:nth-child(1){animation-delay:.05s}
+.team-card.anim:nth-child(2){animation-delay:.10s}
+.team-card.anim:nth-child(3){animation-delay:.15s}
+.team-card.anim:nth-child(4){animation-delay:.20s}
+.team-card.anim:nth-child(5){animation-delay:.25s}
+.team-card.anim:nth-child(6){animation-delay:.30s}
+.team-card.anim:nth-child(7){animation-delay:.35s}
+.team-card.anim:nth-child(8){animation-delay:.40s}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .directors-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .careers-layout{grid-template-columns:1fr;gap:44px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:768px){
+  .topbar-left{display:none}
+  .nav-links,.nav-btn{display:none}
+  .hamburger{display:flex}
+  .mobile-menu.open{display:flex}
+  .director-card{flex-direction:column;text-align:center}
+  .director-social{justify-content:center}
+  .page-hero h1{font-size:2rem}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-band .container{flex-direction:column;text-align:center}
+  .cta-right{justify-content:center}
+}
+@media(max-width:480px){.team-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-left">
+      <span><i class="fas fa-map-marker-alt"></i>97B, 1st Floor, Amritpuri, East of Kailash, Delhi‑110065</span>
+      <a href="mailto:cspsupport@sidhshree.com"><i class="fas fa-envelope"></i>cspsupport@sidhshree.com</a>
+    </div>
+    <div class="topbar-right">
+      <a href="tel:01146051122"><i class="fas fa-phone"></i>011‑46051122</a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">SC</div>
+      <div class="logo-text">Sidhshree Computronics <span>Pvt. Ltd. · Authorised Dealer</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#partners">Partners</a></li>
+      <li><a href="index.html#products">Products</a></li>
+      <li><a href="team.html" class="active">Our Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-btn">Get a Quote</a>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#partners">Partners</a>
+    <a href="index.html#products">Products</a>
+    <a href="team.html" class="active">Our Team</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right"></i>
+      <span>Our Team</span>
+    </div>
+    <h1>The People Behind <em>Sidhshree</em></h1>
+    <p>Two decades of excellence driven by passionate technology professionals committed to delivering the best for every client.</p>
+  </div>
+</div>
+
+<!-- DIRECTORS + TEAM -->
+<section>
+  <div class="container">
+
+    <!-- Directors -->
+    <div class="center" style="margin-bottom:40px">
+      <div class="section-tag">Leadership</div>
+      <h2 class="section-title">Meet Our <span>Directors</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="directors-grid">
+      <div class="director-card anim">
+        <div class="director-photo">
+          <div class="photo-placeholder" id="dir1-ph">PG</div>
+          <img id="dir1-img" src="images/team/puneet.jpg" alt="Puneet Garg" style="display:none" onload="showImg('dir1')" onerror="showPlaceholder('dir1')">
+        </div>
+        <div class="director-info">
+          <h3>Puneet Garg</h3>
+          <div class="director-role">Director</div>
+          <p class="director-bio">Visionary leader with over 23 years in enterprise IT, steering Sidhshree's strategic growth, key partnerships, and long-term business direction across India's IT ecosystem.</p>
+          <div class="director-social">
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:cspsupport@sidhshree.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:01146051122" title="Phone"><i class="fas fa-phone-alt"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="director-card anim">
+        <div class="director-photo">
+          <div class="photo-placeholder" id="dir2-ph">SR</div>
+          <img id="dir2-img" src="images/team/sanket.jpg" alt="Sanket Rastogi" style="display:none" onload="showImg('dir2')" onerror="showPlaceholder('dir2')">
+        </div>
+        <div class="director-info">
+          <h3>Sanket Rastogi</h3>
+          <div class="director-role">Director</div>
+          <p class="director-bio">Operational excellence champion overseeing delivery, client relationships and partner programs. Ensures every project is executed on time and to the highest standard.</p>
+          <div class="director-social">
+            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:cspsupport@sidhshree.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="tel:01146051122" title="Phone"><i class="fas fa-phone-alt"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Team -->
+    <div class="center" style="margin-bottom:36px">
+      <div class="section-tag">Core Team</div>
+      <h2 class="section-title">Technology &amp; <span>Operations Team</span></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="team-grid">
+      <div class="team-card anim"><div class="team-photo"><div class="photo-placeholder" id="tm1-ph">CT</div><img id="tm1-img" src="images/team/chirag.jpg" alt="Chirag Tyagi" style="display:none" onload="showImg('tm1')" onerror="showPlaceholder('tm1')"></div><h4>Chirag Tyagi</h4><div class="team-dept">Technology Lead</div><p>Cloud infrastructure &amp; architecture design</p></div>
+      <div class="team-card anim"><div class="team-photo"><div class="photo-placeholder" id="tm2-ph">ET</div><img id="tm2-img" src="images/team/ekansh.jpg" alt="Ekansh Tyagi" style="display:none" onload="showImg('tm2')" onerror="showPlaceholder('tm2')"></div><h4>Ekansh Tyagi</h4><div class="team-dept">Asst. Team Lead</div><p>Cloud operations &amp; optimization</p></div>
+      <div class="team-card anim"><div class="team-photo"><div class="photo-placeholder" id="tm3-ph">AB</div><img id="tm3-img" src="images/team/aarti.jpg" alt="Aarti Bhardwaj" style="display:none" onload="showImg('tm3')" onerror="showPlaceholder('tm3')"></div><h4>Aarti Bhardwaj</h4><div class="team-dept">Backend &amp; Support</div><p>Backend systems &amp; technical support</p></div>
+      <div class="team-card anim"><div class="team-photo"><div class="photo-placeholder" id="tm4-ph">RP</div><img id="tm4-img" src="images/team/rekha.jpg" alt="Rekha Prajapati" style="display:none" onload="showImg('tm4')" onerror="showPlaceholder('tm4')"></div><h4>Rekha Prajapati</h4><div class="team-dept">Accounts</div><p>Finance, billing &amp; accounts management</p></div>
+      <div class="team-card anim"><div class="team-photo"><div class="photo-placeholder" id="tm5-ph">DK</div><img id="tm5-img" src="images/team/dinesh.jpg" alt="Dinesh Kumar" style="display:none" onload="showImg('tm5')" onerror="showPlaceholder('tm5')"></div><h4>Dinesh Kumar</h4><div class="team-dept">Sales</div><p>Client acquisition &amp; business growth</p></div>
+      <div class="team-card anim"><div class="team-photo"><div class="photo-placeholder" id="tm6-ph">VG</div><img id="tm6-img" src="images/team/vishal.jpg" alt="Vishal Gupta" style="display:none" onload="showImg('tm6')" onerror="showPlaceholder('tm6')"></div><h4>Vishal Gupta</h4><div class="team-dept">Dispatch</div><p>Logistics &amp; material dispatch coordination</p></div>
+      <div class="team-card anim"><div class="team-photo"><div class="photo-placeholder" id="tm7-ph">RA</div><img id="tm7-img" src="images/team/rahis.jpg" alt="Rahis Ansari" style="display:none" onload="showImg('tm7')" onerror="showPlaceholder('tm7')"></div><h4>Rahis Ansari</h4><div class="team-dept">IT Team</div><p>IT support &amp; system management</p></div>
+      <div class="team-card anim"><div class="team-photo"><div class="photo-placeholder" id="tm8-ph">MT</div><img id="tm8-img" src="images/team/mohit.jpg" alt="Mohit Tomar" style="display:none" onload="showImg('tm8')" onerror="showPlaceholder('tm8')"></div><h4>Mohit Tomar</h4><div class="team-dept">Networking</div><p>Network setup, monitoring &amp; maintenance</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CAREERS -->
+<section class="careers" id="careers">
+  <div class="container">
+    <div class="careers-layout">
+
+      <!-- LEFT: perks -->
+      <div class="careers-info">
+        <div class="section-tag">Careers</div>
+        <h2 class="section-title">Want to Join <span>Our Team?</span></h2>
+        <div class="divider"></div>
+        <p style="color:var(--gray);line-height:1.76;margin-bottom:28px">We are always looking for passionate IT professionals to grow with us. If you are driven, skilled and want to work with the best brands in the industry — we'd love to hear from you.</p>
+
+        <div class="career-perk">
+          <div class="perk-icon"><i class="fas fa-rocket"></i></div>
+          <div><h4>Grow Fast</h4><p>Work on enterprise projects across hardware, cloud, networking and security — build real skills, fast.</p></div>
+        </div>
+        <div class="career-perk">
+          <div class="perk-icon"><i class="fas fa-certificate"></i></div>
+          <div><h4>Certifications</h4><p>We support vendor certifications — Cisco, Microsoft, Sophos, Fortinet — to advance your career.</p></div>
+        </div>
+        <div class="career-perk">
+          <div class="perk-icon"><i class="fas fa-users"></i></div>
+          <div><h4>Great Team</h4><p>Join a collaborative, supportive team with a culture built on respect, learning and performance.</p></div>
+        </div>
+        <div class="career-perk">
+          <div class="perk-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div><h4>Delhi HQ</h4><p>Based in East of Kailash, New Delhi — convenient location with a comfortable work environment.</p></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: CAREERS FORM -->
+      <div class="careers-form-card">
+        <h3>Apply Now</h3>
+        <p>Fill out the form below and we'll reach out to you shortly</p>
+
+        <div id="careersForm">
+          <div class="fg" id="fg-c-name">
+            <label>Full Name *</label>
+            <input type="text" id="c-name" placeholder="Your Full Name">
+            <span class="error-msg">Please enter your full name</span>
+          </div>
+
+          <div class="fg" id="fg-c-email">
+            <label>Email Address *</label>
+            <input type="email" id="c-email" placeholder="you@email.com">
+            <span class="error-msg">Please enter a valid email address</span>
+          </div>
+
+          <div class="form-row">
+            <div class="fg" id="fg-c-phone">
+              <label>Mobile Number *</label>
+              <input type="tel" id="c-phone" placeholder="10-digit number" maxlength="10" inputmode="numeric"
+                     oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10)">
+              <span class="error-msg">Please enter a valid 10-digit number</span>
+            </div>
+            <div class="fg" id="fg-c-role">
+              <label>Position Applying For *</label>
+              <select id="c-role">
+                <option value="">Select a Role</option>
+                <option>Sales Executive</option>
+                <option>Network Engineer</option>
+                <option>IT Support Engineer</option>
+                <option>Cloud / System Admin</option>
+                <option>Accounts Executive</option>
+                <option>Dispatch / Logistics</option>
+                <option>Other / Fresher</option>
+              </select>
+              <span class="error-msg">Please select a role</span>
+            </div>
+          </div>
+
+          <div class="fg">
+            <label>Experience</label>
+            <input type="text" id="c-exp" placeholder="e.g. 2 years in networking, or Fresher">
+          </div>
+
+          <div class="fg">
+            <label>Cover Letter / Why Join Us? *</label>
+            <textarea id="c-msg" placeholder="Tell us about yourself, your skills and why you want to join Sidhshree Computronics..."></textarea>
+            <!-- no validation on textarea — optional feel but we still send it -->
+          </div>
+
+          <button class="btn-submit" id="careersSubmitBtn" onclick="submitCareers()">
+            <span id="careersBtnText">Submit Application →</span>
+          </button>
+
+          <div class="form-error-banner" id="careersErrorBanner" style="display:none">
+            <i class="fas fa-exclamation-circle"></i> Please fill in all required fields correctly.
+          </div>
+        </div>
+
+        <!-- SUCCESS STATE -->
+        <div class="form-success" id="careersSuccess" style="display:none">
+          <i class="fas fa-check-circle"></i>
+          <h4 id="careersSuccessHeading">Application Received!</h4>
+          <p id="careersSuccessMsg">Thank you for applying. We will review your application and get back to you soon.</p>
+          <p class="countdown" id="careersCountdown"></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="container">
+    <div>
+      <h2>Have a Question? Call Us</h2>
+      <p>Our team is available Mon–Sat, 9 AM – 6 PM</p>
+    </div>
+    <div class="cta-right">
+      <div class="cta-phone">
+        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+        <div><small>Call now</small><strong>011‑46051122</strong></div>
+      </div>
+      <a href="contact.html" class="btn-accent">Get a Quote</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Sidhshree <em>Computronics</em> Pvt. Ltd.</h3>
+        <p>A trusted IT solutions provider and authorised channel partner in New Delhi. Supplying genuine hardware, networking, security and software solutions to businesses across India.</p>
+        <div class="footer-social">
+          <a href="#" class="soc"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="soc"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="soc"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="soc"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#partners">Partners</a></li>
+          <li><a href="index.html#products">Products</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="#">IT Hardware Supply</a></li>
+          <li><a href="#">Networking Solutions</a></li>
+          <li><a href="#">Security &amp; Firewall</a></li>
+          <li><a href="#">Microsoft 365</a></li>
+          <li><a href="#">AMC &amp; IT Support</a></li>
+          <li><a href="#">Peripherals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <div class="fc-item"><i class="fas fa-map-marker-alt"></i><span>97B, 1st Floor, Amritpuri, Near ISKCON Temple, East of Kailash, New Delhi – 110065</span></div>
+        <div class="fc-item"><i class="fas fa-envelope"></i>cspsupport@sidhshree.com</div>
+        <div class="fc-item"><i class="fas fa-phone-alt"></i><span>011‑46051122</span></div>
+        <div class="fc-item"><i class="fas fa-globe"></i><span>www.sidhshree.com</span></div>
+        <div class="fc-item"><i class="fas fa-clock"></i><span>Mon–Sat: 9:00 AM – 6:00 PM</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2025 <a href="https://www.sidhshree.com">Sidhshree Computronics Pvt. Ltd.</a> All Rights Reserved.</span>
+      <span>Designed &amp; Developed by <a href="https://www.linkedin.com/in/ekansh-tyagi-103201238/" target="_blank" rel="noopener">Ekansh Tyagi</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Cloudflare email decode -->
+
+
+<script>
+/* ── HAMBURGER ── */
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+
+/* ── PHOTO HELPERS ── */
+function showImg(id) {
+  document.getElementById(id + '-img').style.display = 'block';
+  var ph = document.getElementById(id + '-ph');
+  if (ph) ph.style.display = 'none';
+}
+function showPlaceholder(id) {
+  document.getElementById(id + '-img').style.display = 'none';
+  var ph = document.getElementById(id + '-ph');
+  if (ph) ph.style.display = 'flex';
+}
+
+/* animations handled by CSS keyframes — no JS needed */
+
+/* ══════════════════════════════════════════════════════════════════════
+   CAREERS FORM — EmailJS → sends directly to cspsupport@sidhshree.com
+   Subject line clearly marked: "[Job Application]" so it's easy to
+   distinguish from quote requests in the inbox.
+
+   EmailJS credentials:
+   Service  : service_1bslpsh
+   Template : template_hg9ewxr
+   Public K : WNMkXJYHAFokeSy2M
+   ══════════════════════════════════════════════════════════════════════ */
+
+function validateCareerField(id, checkFn) {
+  var fg = document.getElementById('fg-' + id);
+  var el = document.getElementById(id);
+  if (!fg || !el) return true;
+  var ok = checkFn(el.value.trim());
+  fg.classList.toggle('has-error', !ok);
+  return ok;
+}
+
+function validateCareersAll() {
+  var v1 = validateCareerField('c-name',  function(v) { return v.length > 0; });
+  var v2 = validateCareerField('c-email', function(v) { return /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/.test(v); });
+  var v3 = validateCareerField('c-phone', function(v) { return /^\d{10}$/.test(v); });
+  var v4 = validateCareerField('c-role',  function(v) { return v.length > 0; });
+  return v1 && v2 && v3 && v4;
+}
+
+/* Clear errors on input */
+['c-name','c-email','c-phone','c-role'].forEach(function(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  el.addEventListener('input', function() {
+    var fg = document.getElementById('fg-' + id);
+    if (fg) fg.classList.remove('has-error');
+    var banner = document.getElementById('careersErrorBanner');
+    if (banner) banner.style.display = 'none';
+  });
+});
+
+function submitCareers() {
+  if (!validateCareersAll()) {
+    var banner = document.getElementById('careersErrorBanner');
+    if (banner) banner.style.display = 'block';
+    return;
+  }
+
+  var name    = document.getElementById('c-name').value.trim();
+  var email   = document.getElementById('c-email').value.trim();
+  var phone   = document.getElementById('c-phone').value.trim();
+  var role    = document.getElementById('c-role').value;
+  var exp     = (document.getElementById('c-exp') && document.getElementById('c-exp').value.trim()) || 'Not specified';
+  var cover   = (document.getElementById('c-msg') && document.getElementById('c-msg').value.trim()) || 'No cover letter provided.';
+
+
+  var btn    = document.getElementById('careersSubmitBtn');
+  var btnTxt = document.getElementById('careersBtnText');
+  btn.disabled = true;
+  btnTxt.innerHTML = '<span class="spinner"></span>&nbsp;Sending…';
+
+  var data = new FormData();
+  data.append('_subject', '[Job Application] ' + role);
+  data.append('Applicant Name', name);
+  data.append('Email', email);
+  data.append('Phone', '+91 ' + phone);
+  data.append('Position Applied', role);
+  data.append('Experience', exp);
+  data.append('Cover Letter', cover);
+  data.append('_replyto', email);
+
+  fetch('https://formspree.io/f/mzdkwrlo', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(function(res) {
+    if (res.ok) {
+      document.getElementById('careersForm').style.display    = 'none';
+      document.getElementById('careersSuccess').style.display = 'block';
+      var h = document.getElementById('careersSuccessHeading');
+      var p = document.getElementById('careersSuccessMsg');
+      if (h) h.textContent = 'Application Received, ' + name.split(' ')[0] + '!';
+      if (p) p.textContent = 'Thank you for applying for the "' + role + '" position. Our team will review your application and reach out at ' + email + ' shortly.';
+      var secs = 5;
+      var cd = document.getElementById('careersCountdown');
+      if (cd) cd.textContent = 'Page refreshing in ' + secs + ' seconds…';
+      var t = setInterval(function() {
+        secs--;
+        if (cd) cd.textContent = 'Page refreshing in ' + secs + ' seconds…';
+        if (secs <= 0) { clearInterval(t); window.location.reload(); }
+      }, 1000);
+    } else { throw new Error('fail'); }
+  })
+  .catch(function() {
+    btn.disabled = false;
+    btnTxt.textContent = 'Submit Application →';
+    var banner = document.getElementById('careersErrorBanner');
+    if (banner) {
+      banner.style.display = 'block';
+      banner.innerHTML = '<i class="fas fa-exclamation-circle"></i> Something went wrong. Please try again or call us at 011‑46051122.';
+    }
+  });
+}
+</script>
+</body>
+</html>
