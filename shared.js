@@ -24,7 +24,7 @@
     '<nav role="navigation" aria-label="Main navigation"><div class="nav-inner">' +
     '<a href="index.html" class="logo" aria-label="Sidhshree Computronics Home">' +
     '<div class="logo-icon" aria-hidden="true">SC</div>' +
-    '<div class="logo-text">Sidhshree Computronics<span>Pvt. Ltd. \u00b7 Authorised Dealer</span></div>' +
+    '<div class="logo-text">Sidhshree Computronics<span>Pvt. Ltd.</span></div>' +
     '</a>' +
     '<ul class="nav-links" role="list">' +
     '<li><a href="index.html"' + a('index.html') + '>Home</a></li>' +
